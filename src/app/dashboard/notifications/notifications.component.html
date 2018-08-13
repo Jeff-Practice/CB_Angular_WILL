@@ -1,10 +1,20 @@
-
-
-<div class="list-group">
-    <a href="#" class="list-group-item">
-      <i [class]="item.iconclass"></i> {{item.value}}
-      <span class="pull-right text-muted small">
-        <em>{{item.time}}</em>
-      </span>
-    </a>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-bell fa-fw"></i> Notifications Panel
   </div>
+  <!-- /.panel-heading -->
+  <div class="panel-body">
+    <div class="list-group" *ngFor="let item of NotificationsData">
+      <a href="#" class="list-group-item">
+        <i [class]="item.iconclass"></i> {{item.value}}
+        <span class="pull-right text-muted small">
+          <em>{{item.time}}</em>
+        </span>
+      </a>
+    </div>
+    <!-- /.list-group -->
+    <a href="#" class="btn btn-default btn-block">View All Alerts</a>
+  </div>
+  <!-- /.panel-body -->
+</div>
+<!-- /.panel -->
